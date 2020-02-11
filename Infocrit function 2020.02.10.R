@@ -22,7 +22,7 @@ infocrit <- function(deviance, k, m, N) {
   print(paste("Model HQIC(N):",ModelHQIC_N))
 }
 
-# Example of manual computation of information criteria, user directly inputs deviance, parms, m, and N
+# Example of direct computation of information criteria; user directly inputs deviance, number of estimated parameters, number of clusters (m), and number of observations (N)
 
 infocrit(500,5,50,150)
 
@@ -46,5 +46,5 @@ model_m <- unname(groups, force = FALSE)
 
 model_N <- model$dims$N
 
-infocrit(modeldeviance, 3, model_m, model_N) # AIC and BIC(m) match what's shown in the summary
+infocrit(modeldeviance, 3, model_m, model_N) # AIC and BIC(m) match what's shown in summary(model)
 
